@@ -27,7 +27,7 @@
 				</div>
 
 				<div class="span5 text">
-					<h1>Browse some random content.</h1>
+					<h1>Browse some random content. 2</h1>
 					<p>We determine your thoughts and interests by measuring things as you browse.</p>
 				</div>
 
@@ -68,7 +68,7 @@
 		<div class="span3 right-side">
 
 			<div class="arrow"></div>
-			<button class="btn btn-info join" id="join">Join now!</span>
+			<button class="btn btn-info join" id="join" onClick="_gaq.push(['_trackEvent', null, 'Join now!', null]);">Join now!</button>
 
 		</div>
 
@@ -98,7 +98,7 @@
 				<div class="span8">
 					<form class="form-inline" onsubmit="return false" id="optin" {{ form_enctype(form) }}>
 						<input name="optin[email]" id="optin-input" type="text" class="optinBox" placeholder="Your email">
-						<button type="submit" class="btn btn-info" id="optin-submit">Remind me</button>
+						<button type="submit" class="btn btn-info" id="optin-submit" onClick="_gaq.push(['_trackEvent', null, 'Remind me', null]);">Remind me</button>
 						{{ form_widget(form._token) }}
 					</form>
 				</div>

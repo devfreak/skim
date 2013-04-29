@@ -1,0 +1,17 @@
+<div class="span6">
+
+	{{ form_start(form) }}
+		<input id="optin-input" type="text" class="optinBox" placeholder="Type something…">
+		<button type="submit" class="btn btn-primary" id="optin-submit">Submit</button>
+	{{ form_end(form) }}
+
+</div>
+<div class="span6">
+	<div class="alert hide" style="position:absolute;" id="optin-message">
+		<button type="button" class="close">&times;</button>
+		<span id="optin-message-text"></span>
+	</div>
+	{{ form_errors(form) }}
+	<h1 id="optin-default">Lorem ipsum dolor amet sit sdlfkjsdlfkjsdlfkjslkdjffjfjf</h1>
+
+</div>

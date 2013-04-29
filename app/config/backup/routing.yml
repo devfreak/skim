@@ -1,0 +1,7 @@
+_hello:
+    resource: "@HelloBundle/Controller/HelloController.php"
+    type: annotation
+
+_test:
+    resource: "@AcmeTestBundle/Controller/DefaultController.php"
+    type: annotation

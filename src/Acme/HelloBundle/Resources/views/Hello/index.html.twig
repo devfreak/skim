@@ -1,0 +1,57 @@
+{% extends "::myBase.html.twig" %}
+
+{% block js %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('web/bundles/hello/js/landing.js') }}"></script>
+{% endblock %}
+
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/hello/css/style.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+	<div id="headline" class="row">
+
+		<div id="logoIcon" class="span6"></div>
+
+		<div id="socialIcon" class="span6">
+			<img src="{{ asset('web/bundles/hello/images/twitter.png') }}" alt="Twitter">
+			<img src="{{ asset('web/bundles/hello/images/facebook.png') }}" alt="Facebook">
+		</div>
+
+	</div>
+
+
+
+	<div class="popover top">
+            <div class="arrow"></div>
+            <h3 class="popover-title">Popover top</h3>
+            <div class="popover-content">
+              <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+            </div>
+          </div>
+	<div class="row contentTitle">
+
+		<div class="span12">
+			<h1>Lorem ipsum dolor sit amet</h1>
+			<h2>DSfjkhsdf dshjfksdf dhfjds</h2>
+		</div>
+
+	</div>
+
+	<div class="row contentText">
+
+		<p>
+			Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
+			tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+			eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea 
+			takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, 
+			consetetur
+		</p>
+
+	</div>
+
+
+{% endblock %}

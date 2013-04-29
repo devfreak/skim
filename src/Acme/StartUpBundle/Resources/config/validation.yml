@@ -1,0 +1,6 @@
+Acme\UserBundle\Entity\Author:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: email
+    properties:
+        email:
+            - Email: ~

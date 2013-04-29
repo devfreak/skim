@@ -1,0 +1,121 @@
+{% extends "::myStartUp.html.twig" %}
+
+{% block js %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('web/bundles/acmestartup/js/landing.js') }}"></script>
+{% endblock %}
+
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/acmestartup/css/style.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+<div id="startUp">
+
+	<div class="row">
+
+		<div class="span8">
+
+			<div class="row step">
+
+				<div class="span">
+					<div class="circle">
+						<p>1</p>
+					</div>
+				</div>
+
+				<div class="span5 text">
+					<h1>Browse some random content.</h1>
+					<p>We determine your thoughts and interests by measuring things as you browse.</p>
+				</div>
+
+			</div>
+
+			<div class="row step">
+
+				<div class="span">
+					<div class="circle">
+						<p>2</p>
+					</div>
+				</div>
+
+				<div class="span5 text">
+					<h1>Get awesome content tailored for you.</h1>
+					<p>Depending on the measurements, we will make you laugh, think or amaze. Promised.</p>
+				</div>
+
+			</div>
+
+			<div class="row step">
+
+				<div class="span">
+					<div class="circle">
+						<p>3</p>
+					</div>
+				</div>
+
+				<div class="span5 text">
+					<h1>Share the content you like and get connected.</h1>
+					<p>As you browse through the internet you will find some amazing content to share. Everyone, who is interested in your content, will be given you as a subscriber - for free.</p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="span3 right-side">
+
+			<div class="arrow"></div>
+			<button class="btn btn-info join" id="join">Join now!</span>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div id="optinPage">
+
+	<div class="row">
+
+		<div class="span8 offset1 top-content">
+
+			<h1>Hello! You caught us before we're ready.</h1>
+			<p>We're working hard to put the finishing touches onto Vimtag. Things are going well and it should be ready very soon. If you'd like us to send you a reminder when we're ready, just put your email in below:</p>
+
+		</div>
+
+	</div>
+
+	<div class="row">
+
+		<div class="span8 offset1 form-container">
+
+			<div class="row-fluid">
+
+				<div class="span8">
+					<form class="form-inline" onsubmit="return false" id="optin" {{ form_enctype(form) }}>
+						<input name="optin[email]" id="optin-input" type="text" class="optinBox" placeholder="Your email">
+						<button type="submit" class="btn btn-info" id="optin-submit">Remind me</button>
+						{{ form_widget(form._token) }}
+					</form>
+				</div>
+
+				<div class="span2">
+					<div class="alert hide" style="position:absolute;" id="optin-message">
+						<button type="button" class="close">&times;</button>
+						<span id="optin-message-text"></span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+{% endblock %}

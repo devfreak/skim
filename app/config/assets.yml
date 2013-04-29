@@ -1,0 +1,21 @@
+assetic:
+    assets:
+
+        bootstrap:
+            inputs:
+                 - '%kernel.root_dir%/Resources/public/css/bootstrap.min.css'
+
+        bootstrap_responsive:
+            inputs:
+                 - '%kernel.root_dir%/Resources/public/css/bootstrap-responsive.min.css'
+        bootstrap_js:
+            inputs:
+                 - '%kernel.root_dir%/Resources/public/js/bootstrap.min.js'
+
+        jquery:
+            inputs:
+                 - 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
+
+        google_analytics:
+            inputs:
+                 - '%kernel.root_dir%/Resources/public/js/google_analytics.js'

@@ -1,0 +1,80 @@
+{# my first base layout in symfony2!!!! #}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf8" />
+
+		<script src="{{ asset('web/bundles/fosjsrouting/js/router.js') }}"></script>
+		<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+
+		<title>{% block title %}Welcome!{% endblock %}</title>
+
+		{% block css %}
+			{% stylesheets '@bootstrap' %}
+				<link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+			{% endstylesheets %}
+		{% endblock %}
+
+		<link rel="shortcut" href="{{ asset('favicon.ico') }}">
+
+		{% block js %}
+
+			{% javascripts '@jquery' %}
+				<script type="text/javascript" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+
+		{% endblock %}
+
+	</head>
+
+	<body>
+
+		<div class="container">
+			{% block body %}{% endblock %}
+			<div class="push"></div>
+		</div>
+
+		<div class="row containerFooter">
+		<div class="arrow"></div>
+
+			<div class="container">
+
+				<div class="row contentFooter">
+
+					<div class="span6">
+
+						<form class="form-inline" onsubmit="return false" id="optin" {{ form_enctype(form) }}>
+							<input name="optin[email]" id="optin-input" type="text" class="optinBox" placeholder="Type something…">
+							<button type="submit" class="btn btn-primary" id="optin-submit">Submit</button>
+							{{ form_widget(form._token) }}
+						</form>
+
+					</div>
+					<div class="span6">
+						<div class="alert hide" style="position:absolute;" id="optin-message">
+						  <button type="button" class="close">&times;</button>
+						  <span id="optin-message-text"></span>
+						</div>
+						<h1 id="optin-default">Lorem ipsum dolor amet sit sdlfkjsdlfkjsdlfkjslkdjffjfjf</h1>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		{% block js_footer %}
+
+			{% javascripts '@bootstrap_js' %}
+				<script type="text/javascript" src="{{ asset_url }}"></script>
+			{% endjavascripts %}
+
+		{% endblock %}
+
+	</body>
+
+</html>

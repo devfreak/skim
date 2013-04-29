@@ -1,0 +1,10 @@
+acme_start_up:
+    resource: "@AcmeStartUpBundle/Controller/DefaultController.php"
+    type: annotation
+
+#_hello:
+ #   resource: "@HelloBundle/Controller/HelloController.php"
+  #  type: annotation
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

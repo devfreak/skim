@@ -1,0 +1,25 @@
+{% extends "::myStartUp.html.twig" %}
+
+{% block js %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('web/bundles/acmestartup/js/landing.js') }}"></script>
+{% endblock %}
+
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/acmestartup/css/style.css') }}" />
+{% endblock %}
+
+{% block body %}
+
+	<div class="row">
+
+		<div class="span8 offset1 top-content">
+
+			<h1>Thank you for your interest in Vimtag! We will contact you as soon as we are ready.</h1>
+
+		</div>
+
+	</div>
+
+{% endblock %}

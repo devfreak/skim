@@ -1,0 +1,150 @@
+* {
+	margin: 0;
+}
+
+html, body {
+
+	background: url(../images/background.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+
+}
+
+.container {
+
+	width: 1015px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -145px;
+
+}
+
+#headline {
+
+	padding-top: 20px;
+
+}
+
+#logoIcon {
+
+	background: url(../images/logo.png) no-repeat;
+	height: 62px;
+
+}
+
+#socialIcon {
+
+	text-align: right;
+
+}
+
+#socialIcon img {
+
+	float: right;
+	padding-left: 5px;
+	background: transparent;
+	margin-top: 5px;
+
+}
+
+.contentTitle {
+
+	padding: 40px 40px;
+
+}
+
+.contentText {
+
+	padding: 0 60px;
+	width: 653px;
+
+}
+
+.contentText p {
+
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+	color: #a7c0d6;
+	font-size: 18px;
+
+}
+
+.contentTitle h2,h1 {
+
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	line-height: 100%;
+	color: white;
+	font-size: 60px;
+	letter-spacing: 2px;
+
+}
+
+h2 {
+	margin-left: 100px;
+}
+
+.containerFooter, .push {
+	height: 145px;
+}
+
+.containerFooter {
+
+	position: relative;
+	margin-left: 0;
+	height: 145px;
+	width: 100%;
+	background: url('../images/footerBackground.png') transparent;
+
+}
+
+.containerFooter .arrow {
+
+	left: 50%;
+	margin-left: -25px;
+	position: absolute;
+	height: 35px;
+	width: 50px;
+	background: url('../images/footerArrow.png') no-repeat transparent;	
+	margin-top: -26px;
+
+}
+
+.contentFooter {
+
+	margin-top: 60px;
+
+}
+
+.contentFooter #optin input, .contentFooter #optin button {
+
+	zoom: 1.2;
+
+}
+
+.contentFooter input.optinBox {
+
+	width: 77%;
+
+}
+
+.contentFooter h1 {
+
+	color: #939393;
+	font-size: 17px;
+	font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	float: right;
+
+}
+
+.alert {
+
+	width: 420px;
+
+}

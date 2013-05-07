@@ -23,7 +23,7 @@ class AppKernel extends Kernel
             new Acme\TestBundle\AcmeTestBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             //new Acme\StartUpBundle\AcmeStartUpBundle(),
-            new FOS\UserBundle\FOSUserBundle(),
+            //new FOS\UserBundle\FOSUserBundle(),
             //new Vimtag\UserBundle\VimtagUserBundle(),
         );
 

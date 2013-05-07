@@ -1,6 +1,6 @@
-#acme_start_up:
- #   resource: "@AcmeStartUpBundle/Controller/DefaultController.php"
- #   type: annotation
+acme_start_up:
+    resource: "@AcmeStartUpBundle/Controller/DefaultController.php"
+    type: annotation
 
 #_hello:
  #   resource: "@HelloBundle/Controller/HelloController.php"
@@ -9,9 +9,9 @@
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
-vimtag:
-    resource: "@VimtagUserBundle/Controller/LoginController.php"
-    type: annotation
+#vimtag:
+    #resource: "@VimtagUserBundle/Controller/LoginController.php"
+    #type: annotation
 
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"

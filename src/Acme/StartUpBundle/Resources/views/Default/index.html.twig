@@ -27,8 +27,8 @@
 				</div>
 
 				<div class="span5 text">
-					<h1>Browse some random content. 2</h1>
-					<p>We determine your thoughts and interests by measuring things as you browse.</p>
+					<h1>Explore awesome content</h1>
+					<p>We measure things and get222222222222 you the most awesome content tailored depending on our measurements.</p>
 				</div>
 
 			</div>
@@ -42,23 +42,8 @@
 				</div>
 
 				<div class="span5 text">
-					<h1>Get awesome content tailored for you.</h1>
-					<p>Depending on the measurements, we will make you laugh, think or amaze. Promised.</p>
-				</div>
-
-			</div>
-
-			<div class="row step">
-
-				<div class="span">
-					<div class="circle">
-						<p>3</p>
-					</div>
-				</div>
-
-				<div class="span5 text">
-					<h1>Share the content you like and get connected.</h1>
-					<p>As you browse through the internet you will find some amazing content to share. Everyone, who is interested in your content, will be given you as a subscriber - for free.</p>
+					<h1>Build a growing audience</h1>
+					<p>As you surf on the WWW, you will stumble over awesome content. Share it with Vimtag and get rewarded with followers by us.</p>
 				</div>
 
 			</div>
@@ -68,7 +53,7 @@
 		<div class="span3 right-side">
 
 			<div class="arrow"></div>
-			<button class="btn btn-info join" id="join" onClick="_gaq.push(['_trackEvent', null, 'Join now!', null]);">Join now!</button>
+			<button class="btn btn-info join" id="join" onClick="_gaq.push(['_trackEvent', 'landing', 'join', 'join now']);">Join now!</button>
 
 		</div>
 
@@ -98,7 +83,7 @@
 				<div class="span8">
 					<form class="form-inline" onsubmit="return false" id="optin" {{ form_enctype(form) }}>
 						<input name="optin[email]" id="optin-input" type="text" class="optinBox" placeholder="Your email">
-						<button type="submit" class="btn btn-info" id="optin-submit" onClick="_gaq.push(['_trackEvent', null, 'Remind me', null]);">Remind me</button>
+						<button type="submit" class="btn btn-info" id="optin-submit" onClick="_gaq.push(['_trackEvent', 'landing', 'remind', 'remind me']);">Remind me</button>
 						{{ form_widget(form._token) }}
 					</form>
 				</div>

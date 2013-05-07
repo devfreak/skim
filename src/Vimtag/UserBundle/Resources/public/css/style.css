@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	zoom: 1.05;
+}
+
+body {
+
+	background: url(../img/background.png);
+
+}
+
+.wrapper {
+
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -50px;
+
+}
+
+html,body {
+
+	height: 100%;
+
+}
+
+.form-inline {
+
+	margin-top: 3px;
+
+}
+
+.header h1 {
+
+	padding-top: 40px;
+
+	font-size: 60px;
+	color: #142e42;
+	font-weight: 400;
+
+}
+
+.join {
+
+	zoom: 1.5;
+	margin-top: 60px;
+
+}
+
+.header h2 {
+
+	padding-top: 10px;
+
+	float: right;
+	font-size: 45px;
+	color: #45667f;
+	font-weight: 300;
+
+}
+
+.step {
+
+	margin-top: 40px;
+
+}
+
+.step .circle {
+
+	border-radius: 50%;
+	width: 55px;
+	height: 37px;
+	background: #142e42;
+	text-align: center;
+	padding-top: 18px;
+
+}
+
+.body {
+
+	padding-top: 30px;
+	padding-bottom: 50px;
+
+}
+
+.body .row {margin-left: 0px;}
+
+.step {
+
+	zoom: 1.1;
+
+}
+
+.step .circle p {
+
+	font-size: 26px;
+	color: #fff;
+
+}
+
+.step .text {
+	padding-top: 2px;
+}
+
+.step .text p {
+
+	font-size: 13px;
+	color: #45667f;
+	line-height: 110%;
+
+}
+
+.step .text h1 {
+
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 3px;
+	line-height: 100%;
+	color: #142e42;
+
+}
+
+.top-content {
+
+	margin-left: 40px;
+	margin-bottom: 40px
+
+}
+
+.top-content h1 {
+
+	color: #142e42;
+	margin-bottom: 10px;
+	font-size: 25px;
+	font-weight: 500;
+
+}
+
+.top-content p {
+
+	color: #45667f;
+	margin-bottom: 10px;
+	line-height: 150%;
+
+}
+
+.form-container {
+
+	margin-left: 40px;
+
+}
+
+.right-side {
+
+	text-align: right;
+	margin-left: 80px;
+
+}
+
+.right-side .arrow {
+
+	background: url('../img/arrow.png') transparent;
+	width: 161px;
+	height: 121px;
+	position: absolute;
+	margin-top: 140px;
+	margin-left: -180px;
+	zoom: 0.75;
+	-moz-transform:  rotate(15deg) ;
+	-webkit-transform:  rotate(15deg) ;
+	-o-transform:  rotate(15deg) ;
+	-ms-transform:  rotate(15deg) ;
+	transform:  rotate(15deg) ;
+
+}
+
+.footer {
+
+	border-top: 1px solid #A3BED1;
+	padding-top: 10px;
+	font-size: 11px;
+	color: #A3BED1;
+
+}
+
+.footer-container, .push {
+
+	height: 50px; /* .push must be the same height as .footer */
+
+}
+
+#join {
+
+	margin-right: 40px;
+
+}
+
+#optin-input {
+
+	width: 280px;
+
+}
+
+#optinPage {
+
+	display: none;
+
+}

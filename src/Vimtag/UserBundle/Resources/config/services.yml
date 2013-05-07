@@ -1,0 +1,7 @@
+parameters:
+#    vimtag_user.example.class: Vimtag\UserBundle\Example
+
+services:
+#    vimtag_user.example:
+#        class: %vimtag_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

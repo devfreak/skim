@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+
+    #Options +FollowSymlinks
+    RewriteEngine On
+RewriteRule ^phpmyadmin - [L,NC]
+
+    # Explicitly disable rewriting for front controllers
+    RewriteRule ^web/app_dev.php - [L]
+    RewriteRule ^web/app.php - [L]
+
+    RewriteCond %{REQUEST_FILENAME} !^(phpmyadmin|index\.php|images|robots\.txt|-f)
+	RewriteCond %{HTTP_HOST} ^vimtag.com$
+	RewriteRule (.*) http://www.vimtag.com/$1 [R=301,L] 
+
+RewriteCond $1 !^(phpmyadmin|index\.php|images|robots\.txt)
+Rewriterule ^phpmyadmin/.*$ - [PT]
+    # Change below before deploying to production
+    RewriteRule ^(.*)$ web/app.php [QSA,L]
+    #RewriteRule ^(.*)$ web/app_dev.php [QSA,L]
+</IfModule>

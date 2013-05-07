@@ -1,0 +1,3 @@
+vimtag_user_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: VimtagUserBundle:Default:index }

@@ -1,0 +1,10 @@
+{% extends '::myStartUp.html.twig' %}
+
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/acmestartup/css/style.css') }}" />
+{% endblock %}
+
+{% block body %}
+	{{ block('fos_user_content') }}
+{% endblock %}

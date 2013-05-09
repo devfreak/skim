@@ -1,3 +1,8 @@
+vimtag_dev:
+    resource: "@VimtagDevBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 acme_start_up:
     resource: "@AcmeStartUpBundle/Controller/DefaultController.php"
     type: annotation

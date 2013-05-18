@@ -1,1 +1,24 @@
-Hello {{ name }}!
+{% extends "FOSUserBundle::vimtag.html.twig" %}
+
+{% block js %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('web/bundles/vimtagdev/js/landing.js') }}"></script>
+{% endblock %}
+
+{% block fos_user_content %}
+
+<div class="row">
+	<div class="span12">
+		<button id="next">Generate</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span12">
+		<iframe id="render" src="http://www.w3schools.com" style="width:700px;height:400px">
+		  <p>Your browser does not support iframes.</p>
+		</iframe>
+	</div>
+</div>
+
+{% endblock fos_user_content %}

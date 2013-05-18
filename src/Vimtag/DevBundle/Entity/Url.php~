@@ -170,27 +170,4 @@ class Url
     {
         return $this->category;
     }
-
-    /**
-     * Set history
-     *
-     * @param \Vimtag\DevBundle\Entity\History $history
-     * @return Url
-     */
-    public function setHistory(\Vimtag\DevBundle\Entity\History $history = null)
-    {
-        $this->history = $history;
-    
-        return $this;
-    }
-
-    /**
-     * Get history
-     *
-     * @return \Vimtag\DevBundle\Entity\History 
-     */
-    public function getHistory()
-    {
-        return $this->history;
-    }
 }

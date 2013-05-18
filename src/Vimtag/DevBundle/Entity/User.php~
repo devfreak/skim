@@ -207,37 +207,4 @@ class User extends BaseUser
     {
         return $this->round;
     }
-
-    /**
-     * Add history
-     *
-     * @param \Vimtag\DevBundle\Entity\History $history
-     * @return User
-     */
-    public function addHistory(\Vimtag\DevBundle\Entity\History $history)
-    {
-        $this->history[] = $history;
-    
-        return $this;
-    }
-
-    /**
-     * Remove history
-     *
-     * @param \Vimtag\DevBundle\Entity\History $history
-     */
-    public function removeHistory(\Vimtag\DevBundle\Entity\History $history)
-    {
-        $this->history->removeElement($history);
-    }
-
-    /**
-     * Get history
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getHistory()
-    {
-        return $this->history;
-    }
 }

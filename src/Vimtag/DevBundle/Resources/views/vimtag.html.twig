@@ -1,0 +1,17 @@
+{% extends '::vimtag.html.twig' %}
+
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/acmestartup/css/style.css') }}" />
+{% endblock %}
+
+{% block js %}
+	{{ parent() }}
+	{% javascripts '@jquery' %}
+				<script type="text/javascript" src="/web{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
+
+{% block body %}
+	{{ block('fos_user_content') }}
+{% endblock %}

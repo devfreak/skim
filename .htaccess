@@ -3,6 +3,7 @@
     #Options +FollowSymlinks
     RewriteEngine On
 RewriteRule ^phpmyadmin - [L,NC]
+RewriteRule ^blog - [L,NC]
 
     # Explicitly disable rewriting for front controllers
     RewriteRule ^web/app_dev.php - [L]

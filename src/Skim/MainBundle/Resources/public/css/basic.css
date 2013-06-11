@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+}
+
+html, body {
+	
+	background: #3492be;
+	background: url(../images/background5.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 100%;
+
+	font-family: 'Lato', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    font-size: 12px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+
+}
+
+.wrapper {
+
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
+
+}
+
+.footer, .push {
+	height: 100px; /* .push must be the same height as .footer */
+}
+
+.footer {
+
+	height: 99px;
+	background: rgba(0,0,0,0.8);
+	border-top: 1px solid rgba(0,0,0,0.5);
+	opacity: 0;
+	filter: alpha(opacity=0);
+
+}
+
+.footer .span12 {
+
+	margin-top: 40px;
+	color: #fff;
+	font-weight: bold;
+
+}
+
+.content {
+
+	top: 50%;
+	left: 50%;
+	margin-top: -115px;
+	margin-left: -260px;
+	position: absolute;
+
+}

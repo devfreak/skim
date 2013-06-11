@@ -1,0 +1,60 @@
+{# my first base layout in symfony2!!!! #}
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf8" />
+
+		<script src="{{ asset('web/bundles/fosjsrouting/js/router.js') }}"></script>
+		<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+
+		<title>{% block title %}Welcome!{% endblock %}</title>
+
+		{% block css %}
+			{% stylesheets '@bootstrap' %}
+				<link rel="stylesheet" type="text/css" href="/web{{ asset_url }}">
+			{% endstylesheets %}
+		{% endblock %}
+
+		<link rel="shortcut" href="{{ asset('web/favicon.ico') }}">
+
+		{% block js %}
+
+			{% javascripts '@jquery' %}
+				<script type="text/javascript" src="/web{{ asset_url }}"></script>
+			{% endjavascripts %}
+
+		{% endblock %}
+
+	</head>
+
+	<body>
+
+
+		<div class="wrapper">
+			<div class="container-fluid">
+					{% block body %}{% endblock %}
+			</div>
+			<div class="push"></div>
+		</div>
+		<div class="footer">
+			<div class="row-fluid">
+				<div class="span12 text-center">
+					Skim / Share the <3
+				</div>
+			</div>
+		</div>
+
+		{% block js_footer %}
+
+			{% javascripts '@bootstrap_js' %}
+				<script type="text/javascript" src="/web{{ asset_url }}"></script>
+			{% endjavascripts %}
+
+		{% endblock %}
+
+	</body>
+
+</html>

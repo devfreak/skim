@@ -1,0 +1,58 @@
+{% extends "SkimMainBundle:Default:base.html.twig" %}
+
+{% block css %}
+
+{{ parent() }}
+
+<link rel="stylesheet" href="{{ asset('web/bundles/skimmain/css/style.css') }}" />
+
+{% endblock %}
+
+{% block js %}
+
+{{ parent() }}
+
+<script type="text/javascript" src="{{ asset('web/bundles/skimmain/js/launch.js') }}"></script>
+
+{% endblock %}
+
+{% block body %}
+
+	<div class="row-fluid">
+		<div class="span12 text-center">
+
+			<div class="content">
+
+				<div id="launch">
+					<div class="element" id="share">
+						<div class="icon">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/share.svg') }}">
+						</div>
+						<div class="button">
+							Share
+						</div>
+					</div>
+					<div class="element" id="explore">
+						<div class="icon">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/explore.svg') }}">
+						</div>
+						<div class="button">
+							Explore
+						</div>
+					</div>
+					<div class="element" id="connect">
+						<div class="icon">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/connect.svg') }}">
+						</div>
+						<div class="button">
+							Connect
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+{% endblock %}

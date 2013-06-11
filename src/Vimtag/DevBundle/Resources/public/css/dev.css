@@ -1,0 +1,22 @@
+#dev-box {
+	
+	position: absolute;
+	margin-left: 600px;
+	padding: 10px;
+	background: #EEE;
+	border: 1px solid #888;
+
+}
+
+#dev-box .area {
+
+	border-bottom: 1px solid #000;
+	margin-bottom: 10px;
+
+}
+
+#dev-box span {
+
+	font-weight: bold;
+
+}

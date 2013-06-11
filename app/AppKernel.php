@@ -24,7 +24,8 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Acme\StartUpBundle\AcmeStartUpBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Vimtag\DevBundle\VimtagDevBundle(),
+            //new Vimtag\DevBundle\VimtagDevBundle(),
+            new Skim\MainBundle\SkimMainBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

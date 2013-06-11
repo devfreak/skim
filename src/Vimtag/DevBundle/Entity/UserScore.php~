@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @ORM\Table()
  * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Vimtag\DevBundle\Entity\UserScoreRepository")
  */
 class UserScore
 {
@@ -35,13 +36,6 @@ class UserScore
     private $percentage;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="interests", type="integer")
-     */
-    private $interests;
-
-    /**
      * @ORM\ManyToOne(targetEntity="Vimtag\DevBundle\Entity\User", inversedBy="scores")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
@@ -50,9 +44,9 @@ class UserScore
     /**
      * @var integer
      *
-     * @ORM\Column(name="lastvisit", type="integer")
+     * @ORM\Column(name="not_interest", type="integer")
      */
-    private $lastvisit;
+    private $not_interest;
 
     /**
      * Get id
@@ -62,6 +56,11 @@ class UserScore
     public function getId()
     {
         return $this->id;
+    }
+
+    public function __construct()
+    {
+        $this->not_interest = 0;
     }
 
     /**
@@ -223,5 +222,28 @@ class UserScore
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * Set not_interest
+     *
+     * @param integer $notInterest
+     * @return UserScore
+     */
+    public function setNotInterest($notInterest)
+    {
+        $this->not_interest = $notInterest;
+    
+        return $this;
+    }
+
+    /**
+     * Get not_interest
+     *
+     * @return integer 
+     */
+    public function getNotInterest()
+    {
+        return $this->not_interest;
     }
 }

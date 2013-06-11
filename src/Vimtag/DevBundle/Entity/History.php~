@@ -28,7 +28,7 @@ class History
     private $user;
 
     /**
-     * @ORM\OneToOne(targetEntity="Vimtag\DevBundle\Entity\Url") 
+     * @ORM\ManyToOne(targetEntity="Vimtag\DevBundle\Entity\Url", inversedBy="history")
      * @ORM\JoinColumn(name="url_id", referencedColumnName="id")
      */
     private $url;
@@ -41,5 +41,51 @@ class History
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Vimtag\DevBundle\Entity\User $user
+     * @return History
+     */
+    public function setUser(\Vimtag\DevBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+    
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Vimtag\DevBundle\Entity\User 
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * Set url
+     *
+     * @param \Vimtag\DevBundle\Entity\Url $url
+     * @return History
+     */
+    public function setUrl(\Vimtag\DevBundle\Entity\Url $url = null)
+    {
+        $this->url = $url;
+    
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return \Vimtag\DevBundle\Entity\Url 
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

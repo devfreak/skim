@@ -30,6 +30,27 @@ class Url
     private $url;
 
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="interests", type="integer")
+     */
+    private $interests;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="views", type="integer")
+     */
+    private $views;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="not_interest", type="integer")
+     */
+    private $not_interest;
+
+    /**
      * @ORM\ManyToOne(targetEntity="Vimtag\DevBundle\Entity\User", inversedBy="urls")
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
@@ -47,7 +68,7 @@ class Url
     protected $category;
 
     /**
-     * @ORM\OneToOne(targetEntity="Vimtag\DevBundle\Entity\History", mappedBy="url")
+     * @ORM\OneToMany(targetEntity="Vimtag\DevBundle\Entity\History", mappedBy="url")
      */
     private $history;
 
@@ -192,5 +213,74 @@ class Url
     public function getHistory()
     {
         return $this->history;
+    }
+
+    /**
+     * Set interests
+     *
+     * @param integer $interests
+     * @return Url
+     */
+    public function setInterests($interests)
+    {
+        $this->interests = $interests;
+    
+        return $this;
+    }
+
+    /**
+     * Get interests
+     *
+     * @return integer 
+     */
+    public function getInterests()
+    {
+        return $this->interests;
+    }
+
+    /**
+     * Set views
+     *
+     * @param integer $views
+     * @return Url
+     */
+    public function setViews($views)
+    {
+        $this->views = $views;
+    
+        return $this;
+    }
+
+    /**
+     * Get views
+     *
+     * @return integer 
+     */
+    public function getViews()
+    {
+        return $this->views;
+    }
+
+    /**
+     * Add history
+     *
+     * @param \Vimtag\DevBundle\Entity\UserScore $history
+     * @return Url
+     */
+    public function addHistory(\Vimtag\DevBundle\Entity\UserScore $history)
+    {
+        $this->history[] = $history;
+    
+        return $this;
+    }
+
+    /**
+     * Remove history
+     *
+     * @param \Vimtag\DevBundle\Entity\UserScore $history
+     */
+    public function removeHistory(\Vimtag\DevBundle\Entity\UserScore $history)
+    {
+        $this->history->removeElement($history);
     }
 }

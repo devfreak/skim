@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * History
  *
  * @ORM\Table()
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Vimtag\DevBundle\Entity\HistoryRepository")
  */
 class History
 {
@@ -28,7 +28,7 @@ class History
     private $user;
 
     /**
-     * @ORM\OneToOne(targetEntity="Vimtag\DevBundle\Entity\Url") 
+     * @ORM\ManyToOne(targetEntity="Vimtag\DevBundle\Entity\Url", inversedBy="history")
      * @ORM\JoinColumn(name="url_id", referencedColumnName="id")
      */
     private $url;

@@ -36,19 +36,10 @@ class UrlScore
     private $percentage;
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="interests", type="integer")
-     */
-    private $interests;
-
-    /**
      * @ORM\ManyToOne(targetEntity="Vimtag\DevBundle\Entity\Url", inversedBy="scores")
      * @ORM\JoinColumn(name="url_id", referencedColumnName="id")
      */
     private $url;
-
-
 
     /**
      * Get id
@@ -150,5 +141,28 @@ class UrlScore
     public function getUrl()
     {
         return $this->url;
+    }
+
+    /**
+     * Set not_interest
+     *
+     * @param integer $notInterest
+     * @return UrlScore
+     */
+    public function setNotInterest($notInterest)
+    {
+        $this->not_interest = $notInterest;
+    
+        return $this;
+    }
+
+    /**
+     * Get not_interest
+     *
+     * @return integer 
+     */
+    public function getNotInterest()
+    {
+        return $this->not_interest;
     }
 }

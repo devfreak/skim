@@ -57,6 +57,12 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+services:
+    skim_user.url_service:
+        class: Skim\UserBundle\Service\SecurityService
+        arguments:
+            - @security.context
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
@@ -68,7 +74,8 @@ swiftmailer:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
-    user_class: Vimtag\DevBundle\Entity\User
+    user_class: Skim\MainBundle\Entity\User
     registration:
         confirmation:
             enabled:    true
+

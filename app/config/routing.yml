@@ -1,7 +1,12 @@
-vimtag_dev:
-    resource: "@VimtagDevBundle/Controller/"
+skim_main:
+    resource: "@SkimMainBundle/Controller/"
     type:     annotation
     prefix:   /
+
+#vimtag_dev:
+ #   resource: "@VimtagDevBundle/Controller/"
+  #  type:     annotation
+   # prefix:   /
 
 acme_start_up:
     resource: "@AcmeStartUpBundle/Controller/DefaultController.php"

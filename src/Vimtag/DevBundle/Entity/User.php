@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
  * @ORM\Table(name="vimtag_user")
+ * @ORM\Entity(repositoryClass="Vimtag\DevBundle\Entity\UserRepository")
  */
 class User extends BaseUser
 {
@@ -19,6 +20,27 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="interests", type="integer")
+     */
+    private $interests;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="views", type="integer")
+     */
+    private $views;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_interested", type="boolean")
+     */
+    private $is_interested;
 
     /**
      * @var integer
@@ -56,10 +78,25 @@ class User extends BaseUser
      */
     protected $history;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Vimtag\DevBundle\Entity\Follower", mappedBy="follower")
+     */
+    protected $following;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Vimtag\DevBundle\Entity\Follower", mappedBy="following")
+     */
+    protected $followers;
+
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->interests = 0;
+        $this->views = 0;
+        $this->status = 0;
+        $this->last_cat = 1;
+        $this->round = 0;
+        $this->is_interested = false;
     }
 
 
@@ -239,5 +276,140 @@ class User extends BaseUser
     public function getHistory()
     {
         return $this->history;
+    }
+
+    /**
+     * Set interests
+     *
+     * @param integer $interests
+     * @return User
+     */
+    public function setInterests($interests)
+    {
+        $this->interests = $interests;
+    
+        return $this;
+    }
+
+    /**
+     * Get interests
+     *
+     * @return integer 
+     */
+    public function getInterests()
+    {
+        return $this->interests;
+    }
+
+    /**
+     * Set views
+     *
+     * @param integer $views
+     * @return User
+     */
+    public function setViews($views)
+    {
+        $this->views = $views;
+    
+        return $this;
+    }
+
+    /**
+     * Get views
+     *
+     * @return integer 
+     */
+    public function getViews()
+    {
+        return $this->views;
+    }
+
+    /**
+     * Set is_interested
+     *
+     * @param boolean $isInterested
+     * @return User
+     */
+    public function setIsInterested($isInterested)
+    {
+        $this->is_interested = $isInterested;
+    
+        return $this;
+    }
+
+    /**
+     * Get is_interested
+     *
+     * @return boolean 
+     */
+    public function getIsInterested()
+    {
+        return $this->is_interested;
+    }
+
+    /**
+     * Add following
+     *
+     * @param \Vimtag\DevBundle\Entity\Follower $following
+     * @return User
+     */
+    public function addFollowing(\Vimtag\DevBundle\Entity\Follower $following)
+    {
+        $this->following[] = $following;
+    
+        return $this;
+    }
+
+    /**
+     * Remove following
+     *
+     * @param \Vimtag\DevBundle\Entity\Follower $following
+     */
+    public function removeFollowing(\Vimtag\DevBundle\Entity\Follower $following)
+    {
+        $this->following->removeElement($following);
+    }
+
+    /**
+     * Get following
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFollowing()
+    {
+        return $this->following;
+    }
+
+    /**
+     * Add followers
+     *
+     * @param \Vimtag\DevBundle\Entity\Follower $followers
+     * @return User
+     */
+    public function addFollower(\Vimtag\DevBundle\Entity\Follower $followers)
+    {
+        $this->followers[] = $followers;
+    
+        return $this;
+    }
+
+    /**
+     * Remove followers
+     *
+     * @param \Vimtag\DevBundle\Entity\Follower $followers
+     */
+    public function removeFollower(\Vimtag\DevBundle\Entity\Follower $followers)
+    {
+        $this->followers->removeElement($followers);
+    }
+
+    /**
+     * Get followers
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFollowers()
+    {
+        return $this->followers;
     }
 }

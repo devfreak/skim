@@ -5,20 +5,41 @@
 	<script type="text/javascript" src="{{ asset('web/bundles/vimtagdev/js/landing.js') }}"></script>
 {% endblock %}
 
+{% block css %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('web/bundles/vimtagdev/css/dev.css') }}" />
+{% endblock %}
+
 {% block fos_user_content %}
 
 <div class="row">
 	<div class="span12">
-		<button id="next">Generate</button>
+		<button class="btn" id="next">Generate</button>
+		<div id="dev-box" style="display:none">
+
+			<div class="area">
+				<p>Url Interessen: <span id="url-interests"></span></p>
+				<p>User Interessen: <span id="user-interests"></span></p>
+			</div>
+
+			<div class="area">
+				<p>Übertragungen Url to User</p>
+				<p><div id="urlToUser"></div></p>
+			</div>
+
+			<div class="area">
+				<p>Übertragungen User To Url</p>
+				<p><div id="userToUrl"></div></p>
+			</div>
+
+		</div>
 	</div>
 </div>
 
-<div class="row">
-	<div class="span12">
-		<iframe id="render" src="http://www.w3schools.com" style="width:700px;height:400px">
+<div class="row-fluid">
+		<iframe id="render" src="http://www.youtube.com" sandbox="allow-forms allow-scripts" style="width:100%;height:700px">
 		  <p>Your browser does not support iframes.</p>
 		</iframe>
-	</div>
 </div>
 
 {% endblock fos_user_content %}

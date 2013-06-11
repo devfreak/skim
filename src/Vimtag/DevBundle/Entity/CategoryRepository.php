@@ -10,12 +10,12 @@ class CategoryRepository extends EntityRepository
     public function getNextCategory(User $user)
     {
     	return $this
-    	->createQueryBuilder('u')
-    	->orderBy('u.views', 'DESC')
-    	->setFirstResult($user->getLastcat()+1)
-    	->setMaxResults($user->getLastcat()+1)
-    	->getQuery()
-    	->getSingleResult()
+        	->createQueryBuilder('u')
+        	->orderBy('u.views', 'DESC')
+        	->setFirstResult($user->getLastcat()-1)
+        	->setMaxResults(1)
+        	->getQuery()
+        	->getSingleResult()
     	;
     }
 

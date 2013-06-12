@@ -13,17 +13,17 @@ function pushUpIcons()
 	for(i=0;i<icons.length;i++)
 	{
 		$("#" + icons[i]).animate({
-			top: '35px'
+			top: '25px'
 		}, 100).animate({
 			top: '-' + $('body').height()
 		}, 
 		{
-			duration: 600,
+			duration: 150,
 			step: function(now, fx)
 			{
-				if(now < -$('body').height()*0.1)
+				if(now < -$('body').height()*0.2)
 				{
-					$(this).css('opacity', $(this).css('opacity')-0.1);
+					$(this).css('opacity', $(this).css('opacity')-0.4);
 				}
 			}
 		});

@@ -59,9 +59,35 @@ html, body {
 	margin-top: -115px;
 	margin-left: -260px;
 	position: absolute;
+	width: 700px;
 
 }
 
 .page {
 	display: none;
+	margin-left: -80px;
+	position: absolute;
+	width: 700px;
 }
+
+input[class=input-large] {
+  width: 250px;
+  height: 26px ;
+  margin-bottom: 10px;
+  line-height: 30px;
+  padding: 11px 19px;
+  font-size: 15px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.input-large-btn {
+  height: 52px ;
+  margin-bottom: 10px;
+  padding: 0 15px;
+  padding-top: -3px;
+  font-size: 30px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;

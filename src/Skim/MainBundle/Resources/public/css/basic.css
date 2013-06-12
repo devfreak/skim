@@ -19,6 +19,8 @@ html, body {
     letter-spacing: 2px;
     word-spacing: 4px;
 
+    color: #FFF;
+
 }
 
 .wrapper {
@@ -83,10 +85,10 @@ input[class=input-large] {
 }
 
 .input-large-btn {
-  height: 50px ;
+  height: 48px ;
   margin-bottom: 10px;
   padding: 0 15px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   font-size: 30px;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;

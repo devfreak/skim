@@ -16,6 +16,6 @@ RewriteRule ^blog - [L,NC]
 RewriteCond $1 !^(phpmyadmin|index\.php|images|robots\.txt)
 Rewriterule ^phpmyadmin/.*$ - [PT]
     # Change below before deploying to production
-    RewriteRule ^(.*)$ web/app.php [QSA,L]
-    #RewriteRule ^(.*)$ web/app_dev.php [QSA,L]
+    #RewriteRule ^(.*)$ web/app.php [QSA,L]
+    RewriteRule ^(.*)$ web/app_dev.php [QSA,L]
 </IfModule>

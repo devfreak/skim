@@ -1,5 +1,4 @@
 #launch {
-
 }
 
 #launch .element {
@@ -11,6 +10,7 @@
 	opacity: 0;
 	filter: alpha(opacity=0);
     cursor: pointer;
+	position: relative;
 
 }
 

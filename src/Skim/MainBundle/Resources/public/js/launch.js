@@ -13,10 +13,10 @@ function pushUpIcons()
 	for(i=0;i<icons.length;i++)
 	{
 		$("#" + icons[i]).animate({
-			top: '50px'
-		}, 1000).animate({
-				top: '-' + $('body').height()
-			});
+			top: '20px'
+		}, 100).animate({
+			top: '-' + $('body').height()
+		}, 300);
 	}
 }
 

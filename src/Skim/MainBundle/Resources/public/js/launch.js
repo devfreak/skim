@@ -13,10 +13,20 @@ function pushUpIcons()
 	for(i=0;i<icons.length;i++)
 	{
 		$("#" + icons[i]).animate({
-			top: '20px'
+			top: '35px'
 		}, 100).animate({
 			top: '-' + $('body').height()
-		}, 300);
+		}, 
+		{
+			duration: 600,
+			step: function(now, fx)
+			{
+				if(now < -$('body').height()*0.1)
+				{
+					$(this).css('opacity', $(this).css('opacity')-0.1);
+				}
+			}
+		});
 	}
 }
 

@@ -1,0 +1,35 @@
+#explore-page {
+	
+
+}
+
+#explore-page .element {
+
+    width: 125px;
+    float: left;
+    margin-right: 50px;
+    cursor: pointer;
+    position: relative;
+
+}
+
+#explore-page .element .icon {
+
+    margin-bottom: 20px;
+
+}
+
+#explore-page .element img {
+    height: 30px;
+}
+
+#explore-page .element .button {
+
+    padding: 4px 8px;
+    color: #224C6E;
+    font-size: 12px;
+    margin: 0 auto;
+    display: inline-block;
+    width: 80px;
+
+}

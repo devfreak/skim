@@ -1,0 +1,54 @@
+#feed {
+	width: 700px;
+}
+
+#feed p {
+	color: #999999;
+	font-weight: lighter;
+	line-height: 14px;
+}
+
+#feed p b {
+	color: #707070;
+}
+
+#feed .vertical-container {
+	height: 99px;
+	display: table;
+}
+
+#feed .span5 #feeds, #feed .span2 .logo, #feed .span5 #follower-feed {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#feed .vertical-container {
+	width: 100%;
+}
+
+
+#feed .span2 .vertical-container {
+	text-align: center;
+}
+
+#feed .span5 #feeds {
+	text-align: left;
+}
+
+#feed .span5 #follower-feed {
+	text-align: right;
+}
+
+#feed .span2 .logo p {
+
+	color: #707070;
+	font-weight: bold;
+
+}
+
+#feed .span5 #follower-feed {
+
+	color: #999999;
+
+
+}

@@ -13,6 +13,8 @@
 {{ parent() }}
 
 <script type="text/javascript" src="{{ asset('web/bundles/skimmain/js/launch.js') }}"></script>
+<script type="text/javascript" src="{{ asset('web/bundles/skimmain/js/share.js') }}"></script>
+<script type="text/javascript" src="{{ asset('web/bundles/skimmain/js/explore.js') }}"></script>
 
 {% endblock %}
 
@@ -26,7 +28,7 @@
 				<div id="launch">
 					<div class="element" id="share">
 						<div class="icon">
-							<img src="{{ asset('web/bundles/skimmain/images/icons/share.svg') }}">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/share.png') }}">
 						</div>
 						<div class="button">
 							Share
@@ -34,27 +36,86 @@
 					</div>
 					<div class="element" id="explore">
 						<div class="icon">
-							<img src="{{ asset('web/bundles/skimmain/images/icons/explore.svg') }}">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/explore.png') }}">
 						</div>
 						<div class="button">
 							Explore
 						</div>
 					</div>
-					<div class="element" id="connect">
+					<div class="element" id="profile">
 						<div class="icon">
-							<img src="{{ asset('web/bundles/skimmain/images/icons/connect.svg') }}">
+							<img src="{{ asset('web/bundles/skimmain/images/icons/profile.png') }}">
 						</div>
 						<div class="button">
-							Connect
+							Profile
 						</div>
 					</div>
 				</div>
 
 				<div id="share-page" class="page">
-				<h1>Share content and get followers</h1><br>
-					<input type="text" class="input-large" placeholder="The URL"></input>
-					<input type="text" class="input-large" placeholder="Keys"></input>
-					<button type="text" class="btn-success input-large-btn">+</button>
+					<div id="url">
+							<form>
+								<div class="input-append">
+									<input type="text" placeholder="The URL">
+									<button type="submit" class="btn btn-info">+</button>
+								</div>
+							</form>
+		 			</div>
+	 				<div id="tags">
+	 					<div class="row">
+	 						<form>
+								<div class="input-append">
+		 							<input type="text" placeholder="Tags">
+		 							<button type="submit" class="btn btn-info">Share</button>
+								</div>
+	 						</form>
+	 					</div>
+	 					<div class="row-fluid text-center" id="tagcloud">
+	 					</div>
+	 				</div>
+ 				</div>
+
+ 				<div id="explore-page" class="page">
+
+ 					<div id="explore-select">
+ 						<div class="row-fluid text-center">
+ 							<div class="span12">
+		 						<div class="element" id="magic-select">
+									<div class="icon">
+										<img src="{{ asset('web/bundles/skimmain/images/icons/share.png') }}">
+									</div>
+									<div class="button">
+										Magic
+									</div>
+								</div>
+								<div class="element" id="tags-select">
+									<div class="icon">
+										<img src="{{ asset('web/bundles/skimmain/images/icons/explore.png') }}">
+									</div>
+									<div class="button">
+										Tags
+									</div>
+								</div>
+								<div class="element" id="history-select">
+									<div class="icon">
+										<img src="{{ asset('web/bundles/skimmain/images/icons/profile.png') }}">
+									</div>
+									<div class="button">
+										History
+									</div>
+								</div>
+								<div class="element" id="favorites-select">
+									<div class="icon">
+										<img src="{{ asset('web/bundles/skimmain/images/icons/profile.png') }}">
+									</div>
+									<div class="button">
+										Favorites
+									</div>
+								</div>
+							</div>
+						</div>
+ 					</div>
+
  				</div>
 
 			</div>

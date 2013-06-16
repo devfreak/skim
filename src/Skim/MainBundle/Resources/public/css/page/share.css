@@ -1,9 +1,60 @@
 #share-page {
 	
+	margin-top: 50px;
 
 }
 
+#share-page #url .span1 {
+	margin-left: 0px;
+}
 
-#share-page h1 {
-font-family: "Brush Script MT", cursive;
+#tags {
+	display:none;
+}
+
+#share-page input {
+	width: 400px;
+}
+
+#share-page #tags input {
+	width: 200px;
+}
+
+.depth {
+	text-align: left;
+    display: block;
+    color: #002A4D;
+    font: bold 18px Arial, sans-serif;
+    position: relative;
+}
+
+.depth:before, .depth:after {
+    content: attr(title);
+    color: rgba(255,255,255,.1);
+    position: absolute;
+}
+
+.depth:before { top: 0px; left:0px;}
+.depth:after  { top: 1px; left: 1px; }
+
+.child {
+
+	float: left;
+	margin-right: 10px;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	padding: 5px;
+	border-radius: 3px;
+	cursor: pointer;
+
+}
+
+/*.child {
+	*display: inline;
+	*margin: 0 5px;
+}*/
+
+#tagcloud {
+	width: 600px;
+	margin: 0 auto;
 }

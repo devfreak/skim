@@ -1,4 +1,4 @@
-var icons = new Array("share", "explore", "connect");
+var icons = new Array("share", "explore", "profile");
 
 function showIcon(id, delay) {
 	$("#" + id).delay(delay+500).animate({
@@ -67,6 +67,14 @@ $(document).ready(
 		 $('#share').click(function(){
 
 		 	$('#share-page').fadeIn();
+
+		 	$('#share-page #url input').focus();
+
+		 });
+
+		 $('#explore').click(function(){
+
+		 	$('#explore-page').fadeIn();
 
 		 });
 

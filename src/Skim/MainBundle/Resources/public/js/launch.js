@@ -78,6 +78,12 @@ $(document).ready(
 
 		 });
 
+		 $('#profile').click(function(){
+
+		 	$('#profile-page').fadeIn();
+
+		 });
+
 		 $('.footer').click(function(){
 		 	pushDownIcons();
 

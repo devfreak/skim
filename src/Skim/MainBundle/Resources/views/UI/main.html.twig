@@ -25,6 +25,12 @@
 
 			<div class="content">
 
+				<div id="profile-page" class="page">
+					{% block profile %}
+					{% endblock %}
+					{% include "SkimMainBundle:UI:profile.html.twig" %}
+				</div>
+
 				<div id="launch">
 					<div class="element" id="share">
 						<div class="icon">

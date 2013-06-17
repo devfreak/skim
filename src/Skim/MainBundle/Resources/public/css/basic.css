@@ -59,7 +59,6 @@ html, body {
 	margin-top: -115px;
 	margin-left: -260px;
 	position: absolute;
-	width: 600px;
 
 }
 
@@ -67,7 +66,7 @@ html, body {
 	display: none;
 	margin-left: -80px;
 	position: absolute;
-	width: 700px;
+	min-width: 700px;
 }
 
 input[class=input-large] {

@@ -1,5 +1,5 @@
 #feed {
-	width: 700px;
+	/*width: 700px;*/
 }
 
 #feed p {
@@ -17,7 +17,7 @@
 	display: table;
 }
 
-#feed .span5 #feeds, #feed .span2 .logo, #feed .span5 #follower-feed {
+#feed .span3 #feeds, #feed .span2 .logo, #feed .span3 #follower-feed {
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -31,12 +31,12 @@
 	text-align: center;
 }
 
-#feed .span5 #feeds {
-	text-align: left;
+#feed .span3 #feeds {
+	text-align: right;
 }
 
-#feed .span5 #follower-feed {
-	text-align: right;
+#feed .span3 #follower-feed {
+	text-align: left;
 }
 
 #feed .span2 .logo p {
@@ -46,7 +46,7 @@
 
 }
 
-#feed .span5 #follower-feed {
+#feed .span3 #follower-feed {
 
 	color: #999999;
 
